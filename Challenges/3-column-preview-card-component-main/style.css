@@ -1,0 +1,176 @@
+:root {
+
+    --color-primary-400: hsl(31, 77%, 52%);
+    --color-secondary-700: hsl(184, 100%, 22%);
+    --color-secondary-800: hsl(184, 100%, 13%);
+
+    --color-neutral-100: hsla(0, 0%, 100%, 0.75);
+    --color-neutral-200: hsl(0, 0%, 95%);
+
+    --font-body: "Lexend Deca", sans-serif;
+    --font-heading: "Big Shoulders Display", sans-serif;
+
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    font-family: var(--font-body);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    background-color: var(--color-neutral-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.even-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    overflow: hidden;
+    max-width: min(80%, 60rem);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem;
+    color: var(--color-neutral-200);
+    transition: 300ms ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.card:nth-child(1) {
+    background-color: var(--color-primary-400);
+}
+
+.card:nth-child(2) {
+    background-color: var(--color-secondary-700);
+}
+
+.card:nth-child(3) {
+    background-color: var(--color-secondary-800);
+}
+
+
+
+.learn-more {
+    border-radius: 100vw;
+    border: 0;
+    padding: 1rem;
+    background-color: var(--color-neutral-200);
+    transition: background-color 300ms, color 300ms;
+    cursor: pointer;
+    max-width: 70%;
+}
+
+#sedan {
+    color: var(--color-primary-400);
+}
+
+#suv {
+    color: var(--color-secondary-700);
+}
+
+#luxury {
+    color: var(--color-secondary-800);
+}
+
+#sedan:hover,
+#suv:hover,
+#luxury:hover {
+    color: var(--color-neutral-200);
+    outline: 3px solid var(--color-neutral-200);
+    background-color: transparent;
+}
+
+
+.card>img {
+    max-width: 30%;
+}
+
+
+
+p {
+    color: var(--color-neutral-100);
+}
+
+h2 {
+    color: var(--color-neutral-200);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+
+
+@media screen and (max-width: 809px) {
+    .even-columns {
+        grid-template-columns: 1fr;
+        margin: 0;
+        max-width: none;
+
+    }
+
+    body {
+        display: block;
+        padding: 3rem 1rem;
+    }
+}

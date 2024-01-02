@@ -1,0 +1,320 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+$color-primary-200: hsl(355, 100%, 74%); // CTA hover bg
+$color-primary-400: hsl(356, 100%, 66%); // CTA text
+$color-primary-800: hsl(208, 49%, 24%); // Headings
+
+$color-neutral-100: hsl(0, 0%, 100%);
+$color-neutral-200: hsl(240, 2%, 79%); // Footer text
+$color-neutral-600: hsl(207, 13%, 34%); // Body copy
+$color-neutral-800: hsl(240, 10%, 16%); // Footer background
+
+$color-gradient-200: hsl(13, 100%, 72%);
+$color-gradient-300: hsl(353, 100%, 62%);
+
+$color-gradient-700: hsl(237, 17%, 21%);
+$color-gradient-800: hsl(237, 23%, 32%);
+
+$gradient-intro-cta: linear-gradient(90deg, $color-gradient-200 0%, $color-gradient-300 100%);
+$gradient-body: linear-gradient(from $color-gradient-700 to $color-gradient-800);
+
+$ff-body: "Ubuntu", sans-serif;
+$ff-heading: "Overpass", sans-serif;
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    border: none;
+    background-color: $color-neutral-100;
+    color: $color-primary-200;
+    border-radius: 100vw;
+    padding: 0.75rem 2.5rem;
+    transition: 300ms ease;
+
+    font-family: $ff-body;
+    font-weight: 700;
+
+    &:hover {
+        background: $color-primary-200;
+        color: $color-neutral-100;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: $gradient-intro-cta;
+    position: relative;
+    padding: 3rem 8rem;
+
+    border-bottom-left-radius: 4rem;
+    isolation: isolate;
+    overflow: hidden;
+
+    color: $color-neutral-100;
+    font-family: $ff-body;
+
+    h1 {
+        font-family: $ff-heading;
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+
+    &>p {
+        color: $color-neutral-100;
+    }
+
+    .cta-group {
+        margin-block: 3rem 8rem;
+        display: grid;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 150px 150px;
+        text-align: center;
+
+        &>a {
+            padding: 0.75rem 1rem;
+        }
+
+        .inverse {
+            outline: 1px solid $color-neutral-100;
+            background-color: transparent;
+            color: $color-neutral-100;
+
+            &:hover {
+                background-color: $color-neutral-100;
+                color: $color-primary-200;
+            }
+        }
+
+    }
+}
+
+.nav-background {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    translate: 31.5% -33%;
+    scale: 2.25;
+}
+
+.drop-down-parent {
+    position: relative;
+
+    img {
+        transition: rotate 300ms ease;
+    }
+}
+
+.drop-down-menu {
+    position: absolute;
+    top: 150%;
+
+    background-color: $color-neutral-100;
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.6);
+    color: $color-neutral-800;
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 1.5rem;
+    padding-right: 3rem;
+
+    font-weight: 700;
+    font-family: $ff-heading;
+
+    opacity: 0;
+    scale: 0;
+    transition: scale 300ms ease-out, opacity 300ms ease;
+
+    & li a:hover {
+        color: $color-primary-400;
+    }
+}
+
+.drop-down-parent[data-active="true"] {
+    .drop-down-menu {
+        opacity: 1;
+        scale: 1;
+    }
+
+    img {
+        rotate: 180deg;
+    }
+
+}
+
+
+
+.app__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-neutral-100;
+    width: 100%;
+    font-family: $ff-heading;
+    font-weight: 600;
+
+
+
+    &-links {
+        margin-left: 4rem;
+        display: flex;
+        gap: 2rem;
+
+        .drop-down-parent {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+
+            &>span {
+                cursor: pointer;
+            }
+
+            &:hover>span {
+                text-decoration: underline;
+            }
+
+        }
+    }
+
+    .login-group {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+    font-family: $ff-body;
+
+    h2,
+    h4 {
+        font-family: $ff-heading;
+        font-weight: 700;
+        margin-block: 1rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        gap: 4rem;
+        margin-top: 2rem;
+
+        p {
+            max-width: 56ch;
+            line-height: 1.7;
+        }
+    }
+}
+
+.bg-light {
+    color: $color-neutral-600;
+
+    h2 {
+        padding-bottom: 3rem;
+    }
+
+    h2,
+    h4 {
+        color: $color-primary-800;
+    }
+
+
+}
+
+.editor {
+
+    position: relative;
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        translate: 30% 10%;
+
+    }
+
+}

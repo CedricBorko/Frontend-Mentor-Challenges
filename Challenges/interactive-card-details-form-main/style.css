@@ -1,0 +1,101 @@
+:root {
+  --gradient-input-active: linear-gradient(from hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+  --color-error: hsl(0, 100%, 66%);
+  --color-neutral-100: hsl(0, 0%, 100);
+  --color-neutral-200: hsl(270, 3%, 87%);
+  --color-neutral-400: hsl(279, 6%, 55%);
+  --color-neutral-900: hsl(278, 68%, 11%);
+  --fs-body: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.display {
+  position: relative;
+}
+
+.card__front {
+  background: url("images/bg-card-front.png");
+  position: absolute;
+  padding: 1rem;
+  isolation: isolate;
+  background-size: cover;
+  aspect-ratio: 1.5/1;
+}
+.card__front-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.card__front .card__front-info {
+  display: flex;
+  flex-direction: column;
+}
+.card__front .card__front-info .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__back {
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

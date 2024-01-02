@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(355, 100%, 74%);
+  border-radius: 100vw;
+  padding: 0.75rem 2.5rem;
+  transition: 300ms ease;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+.button:hover {
+  background: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
+  position: relative;
+  padding: 3rem 8rem;
+  border-bottom-left-radius: 4rem;
+  isolation: isolate;
+  overflow: hidden;
+  color: hsl(0, 0%, 100%);
+  font-family: "Ubuntu", sans-serif;
+}
+header h1 {
+  font-family: "Overpass", sans-serif;
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+header > p {
+  color: hsl(0, 0%, 100%);
+}
+header .cta-group {
+  margin-block: 3rem 8rem;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 150px 150px;
+  text-align: center;
+}
+header .cta-group > a {
+  padding: 0.75rem 1rem;
+}
+header .cta-group .inverse {
+  outline: 1px solid hsl(0, 0%, 100%);
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+}
+header .cta-group .inverse:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(355, 100%, 74%);
+}
+
+.nav-background {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  translate: 31.5% -33%;
+  scale: 2.25;
+}
+
+.drop-down-parent {
+  position: relative;
+}
+.drop-down-parent img {
+  transition: rotate 300ms ease;
+}
+
+.drop-down-menu {
+  position: absolute;
+  top: 150%;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 20px rgba(168, 168, 168, 0.6);
+  color: hsl(240, 10%, 16%);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 1.5rem;
+  padding-right: 3rem;
+  font-weight: 700;
+  font-family: "Overpass", sans-serif;
+  opacity: 0;
+  scale: 0;
+  transition: scale 300ms ease-out, opacity 300ms ease;
+}
+.drop-down-menu li a:hover {
+  color: hsl(356, 100%, 66%);
+}
+
+.drop-down-parent[data-active=true] .drop-down-menu {
+  opacity: 1;
+  scale: 1;
+}
+.drop-down-parent[data-active=true] img {
+  rotate: 180deg;
+}
+
+.app__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+.app__navbar-links {
+  margin-left: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+.app__navbar-links .drop-down-parent {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.app__navbar-links .drop-down-parent > span {
+  cursor: pointer;
+}
+.app__navbar-links .drop-down-parent:hover > span {
+  text-decoration: underline;
+}
+.app__navbar .login-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem;
+  font-family: "Ubuntu", sans-serif;
+}
+section h2,
+section h4 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  margin-block: 1rem;
+}
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+section h4 {
+  font-size: 1.5rem;
+}
+section > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+section > div p {
+  max-width: 56ch;
+  line-height: 1.7;
+}
+
+.bg-light {
+  color: hsl(207, 13%, 34%);
+}
+.bg-light h2 {
+  padding-bottom: 3rem;
+}
+.bg-light h2,
+.bg-light h4 {
+  color: hsl(208, 49%, 24%);
+}
+
+.editor {
+  position: relative;
+}
+.editor img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  translate: 30% 10%;
+}
+
+/*# sourceMappingURL=style.css.map */

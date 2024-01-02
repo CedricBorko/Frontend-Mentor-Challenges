@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <main>
+      <div class="even-columns">
+        <div class="content">
+          <h1 class="title">Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul role="list" class="benefits">
+            <li>
+              <img src="assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li>
+              <img src="assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li>
+              <img src="assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </li>
+          </ul>
+          <form action="submit" class="subscription-form">
+            <div class="mail">
+              <label for="mail">Email address</label>
+              <input type="text" id="mail" placeholder="email@company.com" />
+            </div>
+            <button class="button">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <picture class="illustration">
+          <source
+            media="(min-width: 650px)"
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+          />
+          <source
+            media="(max-width: 649px)"
+            srcset="assets/images/illustration-sign-up-mobile.svg"
+          />
+          <img src="assets/images/illustration-sign-up-desktop.svg" alt="" />
+        </picture>
+      </div>
+      <div class="success">
+        <img src="assets/images/icon-success.svg" alt="" class="success-icon" />
+        <h2>Thanks for subscribing</h2>
+        <p class="small">
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="button">Dismiss message</button>
+      </div>
+    </main>
+  </body>
+</html>

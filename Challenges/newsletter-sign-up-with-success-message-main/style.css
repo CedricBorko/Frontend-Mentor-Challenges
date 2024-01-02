@@ -1,0 +1,172 @@
+:root {
+    --color-primary-400: hsl(4, 100%, 67%);
+    --color-primary-500: hsl(339, 100%, 62%);
+
+    --color-neutral-100: hsl(0, 0%, 100%);
+    --color-neutral-400: hsl(231, 7%, 60%);
+    --color-neutral-700: hsl(235, 18%, 26%);
+    --color-neutral-800: hsl(234, 29%, 20%);
+
+    --font-family-body: ;
+    --font-family-heading: ;
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 2rem;
+    --size-600: 3rem;
+    --size-700: 4rem;
+    --size-800: 5rem;
+    --size-900: 6rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+.even-columns {
+    display: grid;
+}
+
+.illustration {
+    grid-row: 1 / 2;
+}
+
+.content {
+    padding-inline: 1.5rem;
+}
+
+
+.title {
+    font-size: 2.5rem;
+    color: var(--color-neutral-800);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.benefits {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.benefits li {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+p {
+    color: var(--color-neutral-700);
+}
+
+.benefits p {
+    max-width: 30ch;
+}
+
+.subscription-form {
+    display: grid;
+    gap: 1rem;
+}
+
+
+.subscription-form label {
+    color: var(--color-neutral-800);
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.subscription-form input {
+    color: var(--color-neutral-400);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-neutral-400);
+    padding: 1rem 1.5rem;
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-neutral-800);
+    color: var(--color-neutral-100);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:is(:hover, :focus) {
+    background: linear-gradient(90deg, var(--color-primary-500), var(--color-primary-400));
+}
+
+
+
+.success {
+    display: none;
+}
+
+@media screen and (min-width: 650px) {
+    .even-columns {
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        padding: 2rem;
+    }
+
+    .illustration {
+        grid-column: 2 / 3;
+        
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="index.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <header class="primary-header">
+      <div class="wrapper">
+        <nav class="primary-navigation">
+          <a href="#">
+            <img src="assets/images/logo.svg" alt="" class="logo" />
+          </a>
+          <ul class="navigation-list" data-open="false">
+            <li class="navigation-list-item">
+              <svg
+                class="toggle-close"
+                width="32"
+                height="31"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g fill="#00001A" fill-rule="evenodd">
+                  <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+                  <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+                </g>
+              </svg>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="navigation-link">Home</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="navigation-link">Work</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="navigation-link">Popular</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="navigation-link">Trending</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="navigation-link">Categories</a>
+            </li>
+          </ul>
+          <svg
+            width="40"
+            height="17"
+            xmlns="http://www.w3.org/2000/svg"
+            class="toggle-open"
+          >
+            <g fill="#00001A" fill-rule="evenodd">
+              <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+              <path d="M0 0h40v3H0z" />
+            </g>
+          </svg>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="hero-columns even-columns">
+          <section class="hero">
+            <picture class="hero-image">
+              <source
+                media="(max-width: 599px)"
+                srcset="assets/images/image-web-3-mobile.jpg"
+              />
+              <source
+                media="(min-width: 600px)"
+                srcset="assets/images/image-web-3-desktop.jpg"
+              />
+              <img src="assets/images/image-web-3-desktop.jpg" alt="" />
+            </picture>
+            <div class="even-columns">
+              <h1 class="main-title">The Bright Future of Web 3.0?</h1>
+              <div class="intro">
+                <p class="main-intro">
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button class="cta | button">Read more</button>
+              </div>
+            </div>
+          </section>
+          <section class="news">
+            <h2 class="news-main-title">New</h2>
+            <div class="news-section">
+              <a href="#" class="news-title">Hydrogen VS Electric Cars</a>
+              <p class="news-description">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </div>
+            <div class="news-section">
+              <a href="#" class="news-title">The Downsides of AI Artistry</a>
+              <p class="news-description">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <div class="news-section">
+              <a href="#" class="news-title">Is VC Funding Drying Up?</a>
+              <p class="news-description">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <section class="features | even-columns">
+          <div class="card">
+            <img
+              src="assets/images/image-retro-pcs.jpg"
+              alt=""
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-id">01</p>
+              <a href="#" class="card-title">Reviving Retro PCs</a>
+              <p class="card-description">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/image-top-laptops.jpg"
+              alt=""
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-id">02</p>
+              <a href="#" class="card-title">Top 10 Laptops of 2022</a>
+              <p class="card-description">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/image-gaming-growth.jpg"
+              alt=""
+              class="card-image"
+            />
+            <div class="card-content">
+              <p class="card-id">03</p>
+              <a href="#" class="card-title">The Growth of Gaming</a>
+              <p class="card-description">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
